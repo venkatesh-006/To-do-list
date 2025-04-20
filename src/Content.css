@@ -1,0 +1,78 @@
+.content-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.list-item:hover {
+  background: #eaeaea;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checked-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete-icon {
+  color: red;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.delete-icon:hover {
+  color: darkred;
+  transform: scale(1.1);
+}
+.text-input{
+  gap: 10px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.search{
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+}
