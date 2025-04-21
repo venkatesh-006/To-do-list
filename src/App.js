@@ -1,19 +1,14 @@
 import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 
 function App() {
 
   //initial item
-   const [items, setItems] = useState(
-    [
-      { id: 1, checked: true, item: "Playing cricket" },
-      { id: 2, checked: false, item: "Reading books" },
-      { id: 3, checked: true, item: "Playing football" },
-    ]
-  );
+   const [items, setItems] = useState(JSON.parse(localStorage.getItem('TO-do-list')) || []);
+
   //checkbox 
     const handleChange = (id) => {
       const listitem = items.map((item) =>
@@ -37,16 +32,17 @@ function App() {
       console.log(Newitem)
       additem(Newitem)
       setNewitem("")
+      localStorage.setItem('TO-do-list', JSON.stringify(Newitem))
 
     }
   //adding new item into array
   const additem = (item) => {
-    const id = item.length ? items[items.length - 1].id +1 : 1;
-    const newadditem = {id, checked:false, item}
-    const listitems = [...items, newadditem]
-    setItems(listitems)
-    localStorage.setItem('TO-do-list', JSON.stringify(listitems))
-  }
+    const id = items.length > 0 ? items[items.length - 1].id + 1 : 1;
+    const newadditem = { id, checked: false, item };
+    const listitems = [...items, newadditem];
+    setItems(listitems);
+    localStorage.setItem('TO-do-list', JSON.stringify(listitems));
+  };
 
   //search filter
 
