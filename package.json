@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://venkatesh-006.github.io/To-do-list"
   "version": "0.1.0",
   "private": true,
   "dependencies": {
